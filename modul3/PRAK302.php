@@ -24,13 +24,17 @@
             $tinggi = (int)$_POST['tinggi'];
             $gambar = $_POST['gambar'];
             echo '<div class="triangle">';
-            for ($i = 0; $i < $tinggi; $i++) {
+            $i = 0; 
+            while ($i < $tinggi) {
                 echo '<div class="row">';
-                for ($j = 0; $j < $tinggi; $j++) {
+                $j = 0; 
+                while ($j < $tinggi) {
                     $class = ($j < $i) ? 'hidden' : '';
                     echo "<img src='$gambar' class='$class'>";
-                }        
+                    $j++; 
+                }
                 echo '</div>';
+                $i++; 
             }
             echo '</div>';
         }
