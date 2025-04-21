@@ -35,12 +35,10 @@ $jumlah = isset($_SESSION['jumlah']) ? $_SESSION['jumlah'] : 0;
                 Jumlah bintang<input type="number" name="jumlah_bintang" min="1" required><br>
                 <button type="submit" name="submit_jumlah">Submit</button>
             </form>';
-        } 
-        else {
+        } else {
             echo '<div>
                 <h3>Jumlah bintang '.$jumlah.'</h3>
                 <div class="star-container">';
-
             for ($i = 0; $i < $jumlah; $i++) {
                 echo '<img src="https://www.freepnglogos.com/uploads/star-png/file-featured-article-star-svg-wikimedia-commons-8.png" class="star" alt="★">';
             }
